@@ -2,11 +2,19 @@ const notes = require('express').Router();
 
 // require uuid package to create unique id for each note
 const {v4: uuidv4 } = require('uuid');
+const {
+  readFromFile,
+  readAndAppend,
+  writeToFile,
+} = require('../helpers/fsUtilities');
 
 // GET route for retrieving all saved notes
 notes.get('/', (req, res) => {
   console.log(req);
-  // read from file ('./db/db.json').then((data) => res.json(JSON.parse(data)));
+  readFromFile('./db/db.json')
+  .then((data) => 
+    res.json(JSON.parse(data))
+  );
 });
 
 // POST route for saving a new note
@@ -22,7 +30,7 @@ notes.post('/', (req, res) => {
       note_id: uuidv4()
     };
 
-    // read and append (newNote, './db/db.json');
+    readAndAppend(newNote, './db/db.json');
 
     const response = {
       status: 'success',
@@ -35,5 +43,21 @@ notes.post('/', (req, res) => {
   }
 
 });
+
+
+// DELETE route for a specific note
+notes.delete('/:note_id', req, res) => {
+  const noteId = req.params.note_id;
+  readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((parsedData) => {
+      // create new array of all notes except the one with the ID provided in the URL
+      const newData = parsedData.filter((note) => note.note_id !== noteId);
+      // save the new array 
+      writeToFile('./db/db.json', newData);
+      // Respond to the DELETE request
+      res.json(`Note ${noteId} has been deleted`);
+    });
+}
 
 module.exports = notes;

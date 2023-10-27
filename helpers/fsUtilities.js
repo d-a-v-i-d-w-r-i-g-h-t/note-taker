@@ -26,20 +26,7 @@ const writeToFile = (destination, content) =>
   };
   
   
-  const readAndRemove = (idToRemove, file) => {
-    fs.readFile(file, 'utf8', (err, data) => {
-      if (err) {
-        console.error(err);
-      } else {
-        const parsedData = JSON.parse(data);
-        const newData = parsedData.filter(obj => obj.id !== idToRemove);
-        writeToFile(file, newData);
-      }
-    });
-  };
-  
-  
     
 
 
-module.exports = { readFromFile, writeToFile, readAndAppend, readAndRemove };
+module.exports = { readFromFile, writeToFile, readAndAppend };
