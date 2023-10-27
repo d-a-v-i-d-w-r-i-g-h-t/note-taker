@@ -10,7 +10,6 @@ const {
 
 // GET route for retrieving all saved notes
 notes.get('/', (req, res) => {
-  console.log(req);
   readFromFile('./db/db.json')
   .then((data) => 
     res.json(JSON.parse(data))
@@ -46,7 +45,7 @@ notes.post('/', (req, res) => {
 
 
 // DELETE route for a specific note
-notes.delete('/:note_id', req, res) => {
+notes.delete('/:note_id', (req, res) => {
   const noteId = req.params.note_id;
   readFromFile('./db/db.json')
     .then((data) => JSON.parse(data))
@@ -58,6 +57,6 @@ notes.delete('/:note_id', req, res) => {
       // Respond to the DELETE request
       res.json(`Note ${noteId} has been deleted`);
     });
-}
+});
 
 module.exports = notes;

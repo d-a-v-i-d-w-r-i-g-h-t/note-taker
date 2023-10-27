@@ -1,5 +1,5 @@
 const express = require('express');
-
+console.log("api request");
 // import modular router for /notes
 const notesRouter = require('./notes');
 
