@@ -45,7 +45,6 @@ const saveNote = (note) =>
     body: JSON.stringify(note)
   });
 
-
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
@@ -96,7 +95,7 @@ const handleNoteDelete = (e) => {
   if (activeNote.id === noteId) {
     activeNote = {};
   }
-
+  
   deleteNote(noteId).then(() => {
     getAndRenderNotes();
     renderActiveNote();
