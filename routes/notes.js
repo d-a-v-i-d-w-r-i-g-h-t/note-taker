@@ -18,12 +18,8 @@ notes.get('/', (req, res) => {
 
 // POST route for saving a new note
 notes.post('/', (req, res) => {
-  console.log("post route");
-  console.log(req.body);
   // destructure elements in req.body
   const { title, text } = req.body;
-  console.log("title: " + title);
-  console.log("text: " + text);
   // if body has a title and a note
   if (title && text) {
     const newNote = {
@@ -55,8 +51,6 @@ notes.delete('/:note_id', (req, res) => {
     .then((parsedData) => {
       // create new array of all notes except the one with the ID provided in the URL
       const newData = parsedData.filter((note) => note.id !== noteId);
-      console.log("newData:");
-      console.log(newData);
       // save the new array 
       writeToFile('./db/db.json', newData);
       // Respond to the DELETE request
