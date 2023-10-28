@@ -16,7 +16,7 @@ N/A
 
 ## Usage 
 
-When the application is loaded, the user is presented a welcome page. Any address at the root page location will result in a wildcard route leading to the ```index.html``` page. If the user clicks the **Get Started** button, they will be taken to the ```notes.html``` page.
+When the application is loaded, the user is presented a welcome page. Any address entered at the root page location will result in a wildcard route leading to the ```index.html``` page. If the user clicks the **Get Started** button, they will be taken to the ```notes.html``` page.
 
 ![Welcome page](public/assets/images/welcome-page.png)
 
