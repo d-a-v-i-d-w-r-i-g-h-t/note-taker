@@ -3,5 +3,10 @@
         "title": "New Note Title",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "id": "3efa8ad2-51a8-41c4-b0df-5ebd468971f5"
+    },
+    {
+        "title": "test",
+        "text": "testtest",
+        "id": "d281e0c7-1d99-4f35-aa0b-66ac5fc1b18d"
     }
 ]
