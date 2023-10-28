@@ -2,7 +2,7 @@
 
 ## Description 
 
-For this project, I was tasked to create the backend for an application called Note Taker that can be used to write and save notes. It required an [Express.js](https://expressjs.com/) backend to save and retrieve notes from a JSON file. I had to build the backend, connect the two, and then deploy the entire application to [Heroku](https://www.heroku.com/).
+For this project, I was tasked to create the backend for an application called Note Taker that can be used to write and save notes. It required an [Express.js](https://expressjs.com/) backend to save and retrieve notes from a JSON file. I had to build the backend, connect it to the existing front end, and then deploy the entire application to [Heroku](https://www.heroku.com/).
 
 This project gave me the opportunity to better understand the primary types of fetch requests, including get, post, and delete. Although it wasn't necessary, I implemented modular routing to learn better how to set it up and to make future expansion of the app simpler. I also had to ensure that added elements were provided with a unique id so that they could be referenced by the application for display and if necessary for deletion, so I learned about and employed [uuid](https://www.npmjs.com/package/uuid) for that purpose.
 
