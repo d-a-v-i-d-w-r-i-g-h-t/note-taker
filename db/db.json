@@ -1,22 +1,7 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text",
-        "id": "nvnvnvnvnv"
-    },
-    {
-        "title": "Note 2",
-        "text": "Note 2 text\ntest test test",
-        "id": "fd9bbba7-42b0-4805-b944-6122a5a52fd4"
-    },
-    {
-        "title": "Note 3",
-        "text": "text here",
-        "id": "326daf8f-91aa-4c36-8b61-6fefd410f5a3"
-    },
-    {
-        "title": "Note 4",
-        "text": "Note text text text",
-        "id": "d03f068a-f575-4825-9670-4a795ceeb063"
+        "title": "New Note Title",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "id": "3efa8ad2-51a8-41c4-b0df-5ebd468971f5"
     }
 ]
